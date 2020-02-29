@@ -15,12 +15,14 @@ def NameLength(names):
     return shrtname, lngname
 
 def GuessingGame(shrtname, lngname):
-    guessshrt = input("Guess the length of the shortest name")
-    guesslng = input("Guess the length of the longest name")
+    guessshrt = int(input("Guess the length of the shortest name: "))
+    guesslng = int(input("Guess the length of the longest name: "))
     if guessshrt == shrtname:
-        print("Hurray, you got it right!")
-    elif guesslng == lngname:
-        print("Hurray, you got it right!")
+        print(f"Hurray, you got it right, it was {guessshrt}")
+    else:
+        print("")
+    if guesslng == lngname:
+        print(f"Hurray, you got it right it was {guesslng}")
     else:
         print("Wrong, maybe next time you got it right!")
 
