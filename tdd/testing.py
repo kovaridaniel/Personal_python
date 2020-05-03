@@ -1,7 +1,7 @@
 import unittest
 import mathing
 
-class TestStringMethods(unittest.TestCase):
+class TestMath(unittest.TestCase):
 
     def test_add(self):
         self.assertEqual(mathing.Add(2, 3), 5)
