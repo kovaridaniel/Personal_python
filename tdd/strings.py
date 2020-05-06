@@ -1,5 +1,5 @@
 def Formatting(first_name, last_name):
-    return (f"His name is {first_name} {last_name}.")
+    return f"His name is {first_name} {last_name}."
 
 def NoSpace(text):
     no_space = ""
