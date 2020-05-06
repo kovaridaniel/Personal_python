@@ -1,15 +1,12 @@
 def Sentences(text):
     sentences = []
+    index = 0
     while len(text) > 0:
-        partitioned = text.partition('!')
-        sentences.append(partitioned[0] + partitioned[1])
-        remaining = partitioned[2]
-        if len(remaining) > 0:
-            if remaining[0] == " ":
-                text = remaining[1:]
-        else:
-            text = remaining
+        for char in text:
+            if char == "!" or char == "." or char == "?":
+                sentences.append(text[:index+1])
+                text = text[index+1:]
+            index += 1
+        print(sentences)
     return sentences
 
-# print(Sentences("Have a good day!"))
-# print(Sentences("Good day to you! Have a good day!"))
